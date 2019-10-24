@@ -82,9 +82,9 @@ public class Main {
                 System.out.println("Unesite kod artikla (unesite malo slovo \"c\" za odustajanje): ");
                 String kod = scanner.nextLine();
                 kod = scanner.nextLine();
-                if(!kod.equals("c")){
+                if(!kod.equals("c")) {
                     Artikl a = korpa.izbaciArtiklSaKodom(kod);
-                    if(a != null){
+                    if (a != null) {
                         supermarket.dodajArtikl(a);
                     }
                 }
