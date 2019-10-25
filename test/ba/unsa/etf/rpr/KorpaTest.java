@@ -1,10 +1,16 @@
 package ba.unsa.etf.rpr;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class KorpaTest {
+
+//    @BeforeEach
+//    void setUp() {
+//        Kod koji se izvrsava prije testova
+//    }
 
     @Test
     void izbaciArtiklSaKodom() {
@@ -28,5 +34,15 @@ class KorpaTest {
         k.dodajArtikl(new Artikl("Lopta", 13, "4"));
         k.dodajArtikl(new Artikl("Lopta", 10, "5"));
         assertEquals(56, k.dajUkupnuCijenuArtikala());
+    }
+
+    @Test
+    void testDodavanja(){
+        Korpa k = new Korpa();
+        boolean test = true;
+
+        for(int i=0; i<=50; i++) test = k.dodajArtikl(new Artikl("Lopta", 10, "1"));
+
+        assertEquals(false, test);
     }
 }
